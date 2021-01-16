@@ -1,5 +1,5 @@
 # Azure DevOps Release Pipelines for Website Deployment
-[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-devops-release-pipelines-for-azure-aks.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-devops-release-pipelines-for-azure-aks.jpg)
+[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-devops-release-pipelines-for-azure-aks.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-devops-release-pipelines-for-azure-aks.jpg)
 
 # Pre-requisits 
 ## Create AKS Production Cluster
@@ -63,7 +63,7 @@
 az aks get-credentials --resource-group <Resource-Group-Name> --name <Cluster-Name>
 ```
 # Azure AKS Cluster Access
-[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-kubernetes-service-access-multiple-clusters.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-kubernetes-service-access-multiple-clusters.jpg)
+[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-kubernetes-service-access-multiple-clusters.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-kubernetes-service-access-multiple-clusters.jpg)
 ## Create Azure Container Registry
 - Go to **Services** -> Container Registries
 - Click on **Add**
@@ -74,7 +74,7 @@ az aks get-credentials --resource-group <Resource-Group-Name> --name <Cluster-Na
 - **SKU:** Premium
 - Click on **Review + Create**
 - Click on **Create**
-[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-kubernetes-service-and-acr-nodepools.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-kubernetes-service-and-acr-nodepools.jpg)
+[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-kubernetes-service-and-acr-nodepools.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-kubernetes-service-and-acr-nodepools.jpg)
 ## Step-01: Creating Namespaces in Pre-Production and Production AKS Cluster
 ```
 # Command for Accessing Pre-Production AKS Cluster
@@ -206,7 +206,7 @@ git push --set-upstream origin master
 - **Service Connection Name:** aksdevopsacr-svc
 - **Service Connection Description:** SVC for ACR named aksdevopsacr
 - Click on **Save**
-[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-devops-pipelines-key-concept.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/Images/azure-devops-pipelines-key-concept.jpg)
+[![Image](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-devops-pipelines-key-concept.jpg "Azure AKS Kubernetes")](https://github.com/OmkarDaddikar/azure-aks-kubernetes/blob/master/Images/azure-devops-pipelines-key-concept.jpg)
 ## Step-05: Task-1: Create a Build Pipeline and Publish Artifacts to Azure Pipelines
 - Go to **Pipelines** -> Create **New Folder** -> Website-Deployment-Pipelines
 - Go to **Pipelines** -> Create **New Pipeline**
