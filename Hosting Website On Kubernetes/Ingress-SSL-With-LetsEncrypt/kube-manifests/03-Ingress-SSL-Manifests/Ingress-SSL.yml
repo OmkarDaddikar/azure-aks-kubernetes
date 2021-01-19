@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:  
+  rules:
+  - host: www.pilankarmasale.com  
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: pilankar-masale-clusterip-service
+          servicePort: 80
+  - host: app1.pilankarmasale.com    
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: usermgmt-webapp-clusterip-service
+          servicePort: 80 
+  tls:
+  - hosts:
+    - www.pilankarmasale.com
+    secretName: pilankarmasale-secret           
+  - hosts:
+    - app1.pilankarmasale.com
+    secretName: app1-pilankarmasale-secret           
+          

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-deployment
+  labels:
+    app: pilankar-masale
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pilankar-masale
+  template:
+    metadata:
+      labels:
+        app: pilankar-masale
+    spec:
+      containers:
+        - name: pilankar-masale
+          image: aksdevopsacr.azurecr.io/app/pilankarmasale:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: aksdevopsacr-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pilankar-masale-loadbalancer-service
+  labels:
+    app: pilankar-masale
+spec:
+  type: LoadBalancer
+  selector:
+    app: pilankar-masale
+  ports:
+    - port: 80
+      targetPort: 80
+
+
